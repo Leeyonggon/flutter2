@@ -20,6 +20,7 @@ class _LoadingState extends State<Loading> {
 
   @override
   void initState() {
+    //가장 먼저 실행되는 method
     // TODO: implement initState
     super.initState();
     getLocation();

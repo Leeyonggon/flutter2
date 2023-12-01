@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
+// 위도 경도를 받아오는 class / Geolactor 패키지를 사용
 class myLocation {
   double? latitude2;
   double? longitude2;

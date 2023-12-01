@@ -95,12 +95,16 @@ class _WeatherScreenState extends State<WeatherScreen> {
             Container(
               padding: EdgeInsets.all(20.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment
+                    .spaceBetween, // 행(Row) 위젯 사용시, 주축(mainAxis)은 수평(가로)이며, 횡축(crossAxis)는 세로이다
                 children: [
                   Expanded(
+                    // container를 row나 column을 꽉 채우게 함
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment:
+                          CrossAxisAlignment.start, // columnr경우 주축은 세로 기준 정렬
+                      //열(Column)위젯 사용시, 주축(mainAxis)은 수직(세로)이며, 횡축(crossAxis)는 가로이다
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,6 +125,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 TimerBuilder.periodic(
                                   (Duration(minutes: 1)),
                                   builder: (context) {
+                                    // builder는 return값이 꼭 있어야함
                                     print('${getSystemTime()}');
                                     return Text(
                                       '${getSystemTime()}',
